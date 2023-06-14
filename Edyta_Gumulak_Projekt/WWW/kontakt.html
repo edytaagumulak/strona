@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="skrypt.js"></script>
+    <style>
+        main{
+            padding: 40px 20%;
+            font-family: Verdana;
+            color: rgb(70, 69, 69);
+            font-style: oblique;
+            font-size: 17px;
+        }
+        #heading{
+            text-align: center;
+            font-weight:900;
+            font-size: 35px;
+            font-family: font-menu;
+            text-shadow: 1px 1px 2px gray;
+            word-spacing: 15px;
+            letter-spacing: 3px;
+            padding: 30px 0px;
+            color: black;
+        }
+        .form{
+            width: 100%;
+            padding: 5px 0px;
+            margin: 5px 0px;
+            background-color: rgb(228, 227, 227);
+            border-style: none;
+            border-left: 4px gray solid;
+        }
+        #button{
+            background-color: rgb(228, 227, 227);
+            padding: 5px;
+            border: 3px gray solid;
+            float: right;
+        }
+        form{
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="shortcut icon" type="image/ico" href="../PHOTO/tło/noun-mountains-576444.png">
+    <title>KONTAKT</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.php"><img src="../Photo/karczma/logo.png" alt="logo" id="logo" ></a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="galeria.html">GALERIA</a></li>
+            <li><a href="rezerwacje.html">REZERWACJE</a></li>
+            <li><a href="oferta.html">OFERTA</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="../Photo/tło/slider1.jpeg" alt="slide" name="slide" style="width: 100%; height: 344px;">
+    </header>
+
+    <main>
+        Karczma Regionalna Przy Potoku<br>
+        ul.Partyzantów 1/5<br>
+        34-500 Zakopane<br>
+        tel./fax 18 201 22 32<br>
+        kom 728 128 662<br>
+        karczma@przypotoku.pl<br>
+        <br>
+        Biuro jest czynne od poniedziałku do piątku w godzinach 9.00 – 17.00<br>
+        <p id="heading">FORMULARZ KONTAKTOWY</p>
+        <form action="mailto:karczma@przypotoku.pl" method="post">
+            <input type="text" name="Name" placeholder="Imię" class="form"><br>
+            <input type="text" name="SName" placeholder="Nazwisko" class="form"><br>
+            <input type="text" name="Email" placeholder="E-mail" class="form"><br>
+            <input type="text" name="Phone" placeholder="Telefon kontaktowy" class="form"><br>
+            <textarea name="Message" placeholder="Napisz wiadomość" style="margin-top:8px; max-height: 200px; max-width: 100%;min-width: 100%; min-height: 200px;" class="form"></textarea><br>
+            <input type="submit" name="Contact" value="wyślij wiadomość" id="button">
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <section class="foot">
+               <h2 class="foot-font">LOKALIZACJA</h2><br>
+               ul.Partyzantów 1/5
+               34-500 Zakopane
+            </section>
+
+            <section class="foot">
+               <h2 class="foot-font">CZYNNE</h2><br>
+               Codziennie od godziny 13-21.
+            </section>
+
+            <section class="foot">
+               <h2 class="foot-font">KAPELA</h2><br>
+               Przygrywa w piątki i soboty od 18 do 21.
+            </section>
+        </div>
+        <hr>
+        <p>
+            COPYRIGHT 2023 EDYTA GUMULAK © WSZELKIE PRAWA ZASTRZEŻONE
+        </p>
+    </footer>
+</body>
+
+</html>

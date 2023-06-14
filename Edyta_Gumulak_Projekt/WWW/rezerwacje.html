@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="skrypt.js"></script>
+    <style>
+        main{
+            padding: 0px 20%;
+            font-family: Verdana;
+            color: rgb(70, 69, 69);
+            font-style: oblique;
+            font-size: 17px;
+        }
+        #heading{
+            text-align: center;
+            font-weight:900;
+            font-size: 35px;
+            font-family: font-menu;
+            text-shadow: 1px 1px 2px gray;
+            word-spacing: 15px;
+            letter-spacing: 3px;
+            padding: 30px 0px;
+            color: black;
+        }
+        .form{
+            width: 100%;
+            padding: 5px 0px;
+            margin: 20px 0px;
+            background-color: rgb(228, 227, 227);
+            border-style: none;
+            border-left: 4px gray solid;
+        }
+        #button{
+            background-color: rgb(228, 227, 227);
+            padding: 5px;
+            border: 3px gray solid;
+            margin-top: 20px;
+        }
+        form{
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        #price{
+            text-align: center;
+            padding-bottom: 40px;
+            font-weight: 700;
+            font-size: 23px;
+        }
+        #goral{
+            position: relative;
+            animation-name:animacja;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes animacja{
+            0%{top: 0%; left:0%; }
+            25%{top: 0%; left:80%; }
+            50%{top: 0%; left:0%; }
+            75%{top: 0%; left:80%; }
+            100%{top: 0%; left:0%; }
+           
+}
+    </style>
+    <link rel="shortcut icon" type="image/ico" href="../PHOTO/tło/noun-mountains-576444.png">
+    <title>REZERWACJE</title>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="index.php"><img src="../Photo/karczma/logo.png" alt="logo" id="logo" ></a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="galeria.html">GALERIA</a></li>
+            <li><a href="rezerwacje.html">REZERWACJE</a></li>
+            <li><a href="oferta.html">OFERTA</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+        </ul>
+    </nav>
+    <header>
+        <img src="../Photo/tło/slider1.jpeg" alt="slide" name="slide" style="width: 100%; height: 344px;">
+    </header>
+
+    <main>
+        <p id="heading">OBLICZ KOSZT REZERWACJI STOLIKA</p>
+        <img src="../Photo/gallery/magnes-goral-1.png" alt="Góral" width="150px" height="150px" id="goral">
+        <form id="myForm">
+            Podaj ilość dzieci do lat 5 <input type="number" id="num1" name="num1" value="0" class="form"><br>
+            Podaj ilość dzieci od lat 6 do lat 16 <input type="number" id="num2" name="num2" value="0" class="form"><br>
+            Podaj ilość osób powyżej 16 roku życia <input type="number" id="num3" name="num3" value="0" class="form"><br>
+            <input type="checkbox" id="doubleCheckbox" name="doubleCheckbox"> Stolik przy kapeli<br>
+            <input type="submit" value="Oblicz" id="button">
+        </form>
+    
+        <div id="result"></div>
+
+        <p id="heading">CENNIK</p>
+
+        <div id="price">
+            Dzieci do lat 5 nie płacą za miejsce przy stole<br><br>
+            Dzieci od lat 6 do 16 płacą 3zł za miejsce przy stole<br><br>
+            Osoby powyżej 16 roku życia płacą 5zł za miejsce przy stole<br>
+        </div>
+        <script>
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+                var num3 = parseFloat(document.getElementById("num3").value);
+                var doubleCheckbox = document.getElementById("doubleCheckbox").checked;
+    
+                var sum = num1*0 + num2*3 + num3*5;
+    
+                if (doubleCheckbox) {
+                    sum*=2;
+                }
+    
+                document.getElementById("result").innerHTML = "Cena za dokonanie rezerwacji: " + sum + "zł";
+            });
+        </script>
+
+
+    </main>
+
+    <footer>
+        <div>
+            <section class="foot">
+               <h2 class="foot-font">LOKALIZACJA</h2><br>
+               ul.Partyzantów 1/5
+               34-500 Zakopane
+            </section>
+
+            <section class="foot">
+               <h2 class="foot-font">CZYNNE</h2><br>
+               Codziennie od godziny 13-21.
+            </section>
+
+            <section class="foot">
+               <h2 class="foot-font">KAPELA</h2><br>
+               Przygrywa w piątki i soboty od 18 do 21.
+            </section>
+        </div>
+        <hr>
+        <p>
+            COPYRIGHT 2023 EDYTA GUMULAK © WSZELKIE PRAWA ZASTRZEŻONE
+        </p>
+    </footer>
+</body>
+
+</html>
